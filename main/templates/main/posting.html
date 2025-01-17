@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting</title>
+</head>
+<body>
+    <h1>Page</h1>
+    <p>{{post.postname}}</p>
+    <p>{{post.contents}}</p>
+    {% if post.mainphoto %}
+    <img src = "{{ post.mainphoto.url }}" alt="" height="600">
+    <br>
+    {% endif %}
+    <a href="/board/{{post.pk}}/remove">Delete this post</a>
+    <a href="/board/">Return to Board</a>
+</body>
+</html>

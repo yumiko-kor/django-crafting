@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board List</title>
+</head>
+<body>
+    <h1>Board Page Test</h1>
+    <table>
+    {% for list in postlist %}
+        <ul>
+            <li><a href="{{list.pk}}">{{list.postname}}</a></li>
+        </ul>
+    {% endfor %}
+    </table>
+    <button><a href="post/">Post</a></button>
+</body>
+</html>
