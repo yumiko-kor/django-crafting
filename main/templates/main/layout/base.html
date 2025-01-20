@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <script src="{% static 'js/common.js' %}"></script>
+</head>
+<body>
+    {% include 'main/layout/header.html' %}  <!-- 헤더 삽입 -->
+    {% include 'main/layout/nav.html' %}     <!-- 네비게이션 삽입 -->
+    
+    <main>
+        {% block content %}{% include 'main/layout/content.html' %}{% endblock %}
+    </main>
+    
+    {% include 'main/layout/footer.html' %}  <!-- 푸터 삽입 -->
+</body>
+</html>
